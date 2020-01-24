@@ -1,0 +1,79 @@
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 80vw;
+  font-weight: 400;
+  background-color: skyblue;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  max-width: 800px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.main {
+  text-align: center;
+}
+
+.main__title {
+  font-weight: 700;
+}
+
+.main__subtitle {
+  font-weight: 200;
+  color: grey;
+}
+
+.main__subtitle span {
+  font-weight: 700;
+  color: black;
+  font-size: 1.2em;
+}
+
+
+.form__input {
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid hsl(0, 0%, 59%);
+  border-radius: 20px;
+  padding: 10px 5px;
+}
+
+::placeholder {
+  padding-left: 20px;   
+}
+
+.form__button {
+  width: 80%;
+  background-color: hsl(223, 87%, 63%);
+  padding: 10px 5px;
+  box-shadow: 2px 2px 5px #333;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.main__form {
+  margin-bottom: 20%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+
+  .form__input {
+    width: 50%;
+  }
+
+  .form__button {
+    width: 30%;
+  }
+}
