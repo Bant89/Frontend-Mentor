@@ -1,0 +1,98 @@
+:root {
+  --primary-color: hsl(179, 62%, 43%);
+  --secondary-color: hsl(71, 73%, 54%);
+  --third-color: hsl(179, 42%, 53%);
+  --body-color: hsl(204, 43%, 93%);
+  --title-color: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  display: grid;
+  color: rgba(255,255,255,.6);
+  margin: 0;
+  grid-template-areas: 
+  "principal"
+  "subscription"
+  "reasons"
+  "footer";
+}
+
+section {
+  padding: 10px;
+}
+
+.principal {
+  line-height: 1.2em;
+}
+
+.principal__title {
+  color: var(--primary-color);
+}
+
+.principal__subtitle {
+  color: var(--secondary-color);
+}
+
+.principal__body {
+  color: grey;
+  width: 100%;
+}
+
+.secondary--top {
+  background-color: var(--third-color);
+  color: white;
+  grid-area: subscription;
+}
+
+.secondary__dollar {
+  font-size: 2em;
+  color: white;
+}
+
+.secondary__button {
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: .5em;
+  font-size: 1.2em;
+  font-weight: 800;
+  color: rgb(255,255,255);
+  border: 1px solid transparent;
+  border-radius: .4em;
+  box-shadow: 1px 1px 3px #333;
+  max-width: 350px;
+}
+
+.secondary--down {
+  grid-area: reasons;
+  background-color: var(--primary-color);
+  color: rgb(255,255,255);
+}
+
+.secondary--down__list li {
+  list-style: none;
+}
+
+.secondary--down__list {
+  padding: 5px;
+  line-height: 2em;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media (min-width: 655px) {
+
+  body {
+    grid-template-areas: 
+    "principal principal"
+    "subscription reasons"
+    "footer footer";
+    max-width: 600px;
+    margin: 1em auto;
+  }
+
+}
