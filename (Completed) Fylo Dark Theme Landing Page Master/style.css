@@ -17,10 +17,16 @@ body {
   font-family: var(--font-open);
   color: var(--neutral);
   margin: 0 auto;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: var(--dk-intro-and-email);
 }
 
 .menu {
-  padding: 0.5em;
+  margin: 0 auto;
+  padding: 1em;
   width: 90vw;
   display: flex;
   align-items: center;
@@ -40,13 +46,18 @@ body {
 
 .main {
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--neutral);
   text-align: center;
+  background-color: var(--dk-intro-and-email);
   font-family: var(--font-open);
+  background-image: url('./images/bg-curvy-desktop.svg');
+  background-position: 50% 200%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .main__title {
@@ -82,10 +93,11 @@ body {
 
 .features {
   display: flex;
-  width: 70vw;
+  width: 80vw;
   margin: 2em auto;
   flex-wrap: wrap;
   font-size: 1.4em;
+  justify-content: center;
 }
 
 .features__element {
@@ -116,6 +128,8 @@ body {
 }
 
 .halfSection__img {
+  width: 100%;
+  height: auto;
   grid-area: image;
 }
 
@@ -124,19 +138,19 @@ body {
 }
 
 .halfSection__title {
-  font-size: 3.5em;
+  font-size: 2vw;
   font-weight: 700;
 }
 
 .halfSection__content {
-  font-size: 1.5em;
+  font-size: 150%;
   line-height: 1.2em;
   margin: 20px 0;
   width: 80%;
 }
 
 .halfSection__link {
-  font-size: 1.5em;
+  font-size: 1.5vw;
   width: auto;
   color: var(--acc-ccta);
   text-decoration: none;
@@ -147,21 +161,26 @@ body {
   height: 2px;
   background: var(--acc-ccta);
   display: block;
-  width: 200px;
+  width: 15vw;
   margin-top: 4px;
 }
 
 .testimonial {
   display: flex;
   width: 70vw;
-  margin: 0 auto;
+  margin: 5% auto;
+  padding: 20px;
   justify-content: space-evenly;
+  background-image: url('./images/bg-quotes.png');
+  background-repeat: no-repeat;
+  background-position: 4% 0%;
 }
 
 .testimonial__card {
   width: 25%;
   padding: 2em;
-  background-color: var(--dk-footerbg);
+  margin: 10px;
+  background-color: var(--dk-testbg);
 }
 
 .testimonial__content {
@@ -199,15 +218,19 @@ h1 {
 }
 
 .emailCard {
-  width: 35vw;
-  background-color: var(--dk-footerbg);
+  width: 55vw;
+  position: relative;
+  max-width: 700px;
+  background-color: var(--dk-testbg);
   padding: 20px;
-  margin: 60px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 25vh;
+  height: 35vh;
+  border-radius: 10px;
+  margin-bottom: -10vh;
 }
 
 .emailCard__title {
@@ -252,7 +275,14 @@ footer {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 80vw;
+  width: 100vw;
+  background-color: var(--dk-footerbg);
+  padding: 3em;
+  padding-top: 20vh;
+}
+
+footer > img {
+  margin-left: 10vw;
 }
 
 .footer {
@@ -274,6 +304,19 @@ footer {
   width: 30%;
   flex-grow: 1;
   display: flex;
+}
+
+.footer__item:last-child {
+  margin: 0 auto;
+}
+
+.footer__item > i {
+  text-align: center;
+  width: 15px;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 15px;
+  border: solid var(--neutral) 2px;
 }
 
 .footer__item > p {
@@ -305,16 +348,24 @@ li > img {
   }
 
   .main {
-    width: 75%;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url('images/bg-curvy-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 110%;
   }
 
   .main > * {
-    width: 100%;
+    width: 70%;
   }
 
   .main__image {
     width: 540px;
     height: 334px;
+  }
+
+  .main__button {
+    width: 60%;
   }
 
   .features {
@@ -333,7 +384,9 @@ li > img {
     margin: 30px auto;
     width: 80vw;
     display: grid;
-    grid-template-areas: 'image content';
+    grid-template-areas:
+      'image'
+      'content';
     align-items: center;
     justify-items: center;
     text-align: left;
@@ -352,6 +405,7 @@ li > img {
   .halfSection__content {
     font-size: 1.3em;
     margin-bottom: 10px;
+    width: 90%;
   }
 
   .halfSection__link {
@@ -424,12 +478,6 @@ li > img {
 
   .features__element {
     width: 80%;
-  }
-
-  .halfSection {
-    grid-template-areas:
-      'image'
-      'content';
   }
 
   .halfSection__content {
