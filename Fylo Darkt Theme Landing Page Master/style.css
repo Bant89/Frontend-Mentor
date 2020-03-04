@@ -16,10 +16,10 @@ body {
   height: 100vh;
   font-family: var(--font-open);
   color: var(--neutral);
+  margin: 0 auto;
 }
 
 .menu {
-  margin: 0 auto;
   padding: 0.5em;
   width: 90vw;
   display: flex;
@@ -293,4 +293,159 @@ li {
 
 li > img {
   margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+  }
+
+  .menu__item > img {
+    width: 100px;
+  }
+
+  .main {
+    width: 75%;
+  }
+
+  .main > * {
+    width: 100%;
+  }
+
+  .main__image {
+    width: 540px;
+    height: 334px;
+  }
+
+  .features {
+    width: 80vw;
+    justify-content: space-evenly;
+  }
+  .features__element:nth-child(1) > img {
+    margin-top: 10px;
+  }
+  .features__element {
+    width: 30vw;
+    margin-bottom: 30px;
+  }
+
+  .halfSection {
+    margin: 30px auto;
+    width: 80vw;
+    display: grid;
+    grid-template-areas: 'image content';
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+  }
+
+  .halfSection__img {
+    grid-area: image;
+    width: 300px;
+    height: 300px;
+  }
+
+  .halfSection__title {
+    font-size: 2em;
+  }
+
+  .halfSection__content {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+  }
+
+  .halfSection__link {
+    font-size: 1em;
+    width: auto;
+    color: var(--acc-ccta);
+    text-decoration: none;
+  }
+
+  .halfSection__link::after {
+    width: 150px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+  }
+
+  .testimonial__card {
+    width: 85%;
+    margin-bottom: 30px;
+  }
+
+  .emailCard {
+    width: 80vw;
+    height: 45vh;
+    border-radius: 10px;
+  }
+
+  .emailCard__form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .emailCard__form > input {
+    width: 70%;
+    margin-bottom: 20px;
+    padding: 5px 3px;
+  }
+
+  .emailCard__form > button {
+    width: 70%;
+    padding: 10px 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__item:nth-child(1) {
+    width: 75%;
+    font-size: 1.3em;
+  }
+
+  .footer__item {
+    width: 75%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 0;
+    width: 100%;
+  }
+
+  .main__image {
+    width: 440px;
+    height: 234px;
+  }
+
+  .features__element {
+    width: 80%;
+  }
+
+  .halfSection {
+    grid-template-areas:
+      'image'
+      'content';
+  }
+
+  .halfSection__content {
+    width: 100%;
+  }
+
+  .emailCard__content {
+    margin: 10px 0;
+  }
+
+  .footer__item > p {
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .footer__item {
+    font-size: 1.3em;
+  }
 }
